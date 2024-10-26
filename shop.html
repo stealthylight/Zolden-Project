@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="font/fontawesome-free-5.15.3-web/css/all.css">
+</head>
+<body>
+    <header>
+        <img src="image/Acceuil/logo.JPG" alt="" id="logo">
+        <nav id="navbar">
+            <div id="hamburger-menu" onclick="display_menu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            <div id="menu-1">
+                <ul>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <select name="woman" id="woman">
+                            <option value="Woman">
+                                <a href="">
+                                    Woman
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Cloth
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Pants
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                    <li>
+                        <select name="man" id="man">
+                            <option value="man">
+                                <a href="">
+                                    man
+                                </a>
+                            </option>
+                            <option value="man">
+                                <a href="">
+                                    Short
+                                </a>
+                            </option>
+                            <option value="man">
+                                <a href="">
+                                    Basket
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                    <li>
+                        <a href="">Sale</a>
+                    </li>
+                    <li>
+                        <select name="pages" id="pages">
+                            <option value="pages">
+                                <a href="">
+                                    Pages
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Market
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Design
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div id="menu-2">
+                <ul>
+                    <li id="search">
+                        <input type="text">
+                        <i class="fa fa-search"></i>
+                    </li>
+                    <li>
+                            <i class="fa fa-balance-scale"></i>
+                            <span class="notification">0</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-heart"></i>
+                        <span class="notification">0</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="notification" style="background-color: rgb(81, 148, 248);">0</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--ANJARA's Code-->
+    <div id="container">
+        <div id="container-left">
+            <div class="category">
+                <img src="Image/Shopping/Accessories/Backpack/backpack_icon.jpg" alt="">
+            </div>
+        </div>
+        <div id="container-right">
+            <div id="container-right-above">
+                <h1>
+                    One Backpack
+                </h1>
+                <h2>
+                    Less Burden
+                </h2>
+            </div>
+            <div id="container-right-below">
+                <div id="container-right-below-variable">
+                    <div class="items">
+                        <img src="Image/Shopping/Accessories/Backpack/ur,backpack_front,square,600x600.jpg" alt="">
+                        <p>Black Backpack with Neon dots</p>
+                        <span>$10.0</span>
+                        <div class="add-to-cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Add to cart</span>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <img src="Image/Shopping/Accessories/Backpack/ur,backpack_front,square,600x600.u1.jpg" alt="">
+                        <p>Backpack</p>
+                        <span>$15.0</span>
+                    </div>
+
+                    <div class="items">
+                        <img src="Image/Shopping/Accessories/Backpack/ur,backpack_front,square,600x600.u2.jpg" alt="">
+                        <p>Backpack</p>
+                        <span>$22.0</span>
+                    </div>
+
+                    <div class="items">
+                        <img src="Image/Shopping/Accessories/Backpack/ur,backpack_front,square,600x600_1.jpg" alt="">
+                        <p>Black Backpack with Neon dots</p>
+                        <span>$10.0</span>
+                    </div>
+
+                    <div class="items">
+                        <img src="Image/Shopping/Accessories/Backpack/ur,backpack_front,square,600x600_10.jpg" alt="">
+                        <p>Black Backpack with Neon dots</p>
+                        <span>$10.0</span>
+                    </div>
+
+                    <div class="items">
+                        <img src="Image/Shopping/Accessories/Backpack/ur,backpack_front,square,600x600_11.jpg" alt="">
+                        <p>Black Backpack with Neon dots</p>
+                        <span>$10.0</span>
+                    </div>
+
+                </div>
+                <div id="container-right-below-slide">
+                    <div id="slide-left">&lt;</div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div id="slide-right">&gt;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END ANJARA's Code-->
+    <script src="shop.js"></script>
+</body>
+</html>

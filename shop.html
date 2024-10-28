@@ -9,7 +9,9 @@
 </head>
 <body>
     <header>
-        <img src="image/Acceuil/logo.JPG" alt="" id="logo">
+        <a href="index.html">
+            <img src="image/Acceuil/logo.JPG" alt="" id="logo">
+        </a>
         <nav id="navbar">
             <div id="hamburger-menu" onclick="display_menu()">
                 <span class="hamburger-line"></span>
@@ -19,7 +21,7 @@
             <div id="menu-1">
                 <ul>
                     <li>
-                        <a href="#">Shop</a>
+                        <a href="shop.html">Shop</a>
                     </li>
                     <li>
                         <select name="woman" id="woman">
@@ -518,12 +520,12 @@
 
                 </div>
                 <div id="container-right-below-slide">
-                    <div id="slide-left" onclick="change_page(-1)">&lt;</div>
+                    <div id="slide-left" onclick="change_page(-1)"><a href="#container-right-below">&lt;</a></div>
                     <span class="page" current="5"></span>
                     <span class="page"></span>
                     <span class="page"></span>
                     <span class="page"></span>
-                    <div id="slide-right" onclick="change_page(1)">&gt;</div>
+                    <div id="slide-right" onclick="change_page(1)"><a href="#container-right-below">&gt;</a></div>
                 </div>
             </div>
         </div>

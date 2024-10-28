@@ -2,6 +2,7 @@ shop_variables=document.getElementsByClassName("shop-var");
 pages=document.getElementsByClassName("page");
 right_button = document.getElementById("slide-right");
 left_button = document.getElementById("slide-left");
+background_above = document.getElementById("container-right-above");
 var index;
 index=0;
 for (let i = 0; i < pages.length; i++) {
@@ -23,4 +24,11 @@ function change_page(move){
     console.log("Current Page: " + index);
     pages[index].setAttribute("current","o");
     shop_variables[index].setAttribute("current","1");
+    if(index != 0){
+        background_above.style.display ="none";
+    }
+    else{
+        background_above.style.display="block";
+    }
+
 }

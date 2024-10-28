@@ -43,6 +43,15 @@
         transform: translateX(125px);
     }
 }
+@keyframes rotate {
+    0%{
+        transform: rotateX(0deg);
+
+    }
+    100%{
+        transform: rotateX(720deg);
+    }
+}
 /*END Animation*/
 
 body{
@@ -56,6 +65,15 @@ header {
     flex-wrap: wrap;
     align-items: center;
     height: 5em;
+    position:sticky;
+    top:0px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(80, 80, 80, 0.8);
+    z-index: 2;
+}
+#header>a{
+    display:block;
+    width:15%;
 }
 #navbar{
     display: flex;
@@ -64,7 +82,7 @@ header {
     width:85%;
 }
 #logo{
-    width:15%;
+    width:100%;
     padding-right:1.5em;
     box-sizing: border-box;
 }
@@ -173,7 +191,7 @@ header {
     padding:10px;
 }
 .category img{
-    width:100%;
+    width: 100%;
     border-radius: 120px;
     box-shadow: 0px 2px 3px rgba(20, 20, 20, 0.5),0px -2px 3px rgba(20, 20, 20, 0.5);
 }
@@ -211,6 +229,7 @@ header {
 #container-right-below{
     box-sizing: border-box;
     margin:5px;
+    behavior: smooth;
 }
 .shop-var{
     border:1px solid black;
@@ -318,6 +337,11 @@ header {
     border-radius: 120px;
     border:1px solid black;
     align-self: center;
+}
+#container-right-below-slide a{
+    text-decoration:none;
+    color:rgb(20, 20, 20);
+    scroll-behavior: smooth;
 }
 #container-right-below-slide>div:not(:nth-child(2)):hover{
     background-color: rgb(0, 0, 0);

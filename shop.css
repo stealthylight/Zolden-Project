@@ -20,10 +20,27 @@
 }
 @keyframes show_item{
     0%{
-        opacity:0;
+        margin-bottom: -100px;
     }
     100%{
+        margin-bottom: 0px;
+    }
+}
+@keyframes hide_item{
+    0%{
         opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+@keyframes move_cart{
+    0%{
+        font-size: 1em;
+    }
+    100%{
+        font-size: 0.75em;
+        transform: translateX(125px);
     }
 }
 /*END Animation*/
@@ -63,7 +80,7 @@ header {
     text-decoration: none;
 }
 #hamburger-menu {
-    width:50px;
+    width:100px;
     height:35px;
     background-color: black;
     display:none;
@@ -192,22 +209,23 @@ header {
     font-size: 1em;
 }
 #container-right-below{
-    border:1px solid black;
     box-sizing: border-box;
     margin:5px;
 }
-#container-right-below-variable{
+.shop-var{
+    border:1px solid black;
+    margin:25px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .items{
-    position:relative;
     width:30%;
     color: rgb(30, 30, 30);
     font-size:1.5em;
     background-color: rgb(230, 230, 230);
     margin-top:25px;
+    overflow: hidden;
 }
 .items:hover{
     cursor:pointer;
@@ -221,35 +239,61 @@ header {
     text-shadow: 0px 0px 5px rgb(120, 120, 120);
     margin-bottom:3em;
 }
-.items span{
-    position:absolute;
-    bottom:0px;
-    margin-bottom: 10px;
-}
+
 .add-to-cart{
-    position:absolute;
-    right: 100px;
-    bottom: 0;
-    width:150px;
     box-sizing: border-box;
     padding: 5px;
     border-radius: 50px;
-    border:1px solid rgb(115, 143, 236);
+    box-shadow:1px 1px 3px rgb(115, 143, 236),-1px -1px 3px rgb(115, 143, 236);
     margin-bottom: 5px;
-    display: none;
     opacity:0;
+    display: flex;
+    align-items: center;
+    width:50%;
+}
+.add-to-cart:hover{
+    background-color:rgb(115, 143, 236);
+    color:white;
+
+}
+.add-to-cart:hover i{
+    animation: move_cart;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 0;
 }
 .items:hover .add-to-cart{
-    display:block;
-    animation:show_item;
-    animation-duration: 1s;
+    animation: show_item 1s;
+    opacity: 1;
+}
+.items:hover .items-bottom>input{
+    animation: show_item 1s;
     opacity:1;
 }
+.items-bottom{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.items-bottom>span{
+    font-size: 1em;
+    margin-right: 10px;
+}
+.items-bottom input{
+    background-color: rgba(255,255,255,0);
+    box-shadow: 0px 0px 1px rgb(40, 40, 40);
+    border-radius: 10px;
+    display:inline-block;
+    margin-left: 10px;
+    width:2.5em;
+    font-size: 1em;
+    color: rgb(20, 20, 20);
+    opacity:0;
+}
 .add-to-cart>i{
-    color: rgb(100, 125, 240);
+    color: rgb(50, 75, 255);
 }
 .add-to-cart>span{
-    display: inline-block;
     font-size: 0.75em;
     padding-left:10px;
     text-shadow: 0px 0px 5px grey;
@@ -280,5 +324,14 @@ header {
     box-shadow: 1px 0px 10px rgba(102, 95, 95, 0.486);
     color:white;
     cursor: pointer;
+}
+.page[current]{
+    background-color: rgb(25, 25, 25);
+}
+.shop-var{
+    display: none;
+}
+.shop-var[current]{
+    display: flex;
 }
 /*END ANJARA's Code*/

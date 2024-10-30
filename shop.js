@@ -5,12 +5,7 @@ left_button = document.getElementById("slide-left");
 background_above = document.getElementById("container-right-above");
 var index;
 index=0;
-for (let i = 0; i < pages.length; i++) {
-    const element = pages[i];
-    if(element.hasAttribute("current")){
-        console.log(i+" Is the current page");
-    }
-}
+
 function change_page(move){
     pages[index].removeAttribute("current");
     shop_variables[index].removeAttribute("current");

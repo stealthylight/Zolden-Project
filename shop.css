@@ -1,3 +1,26 @@
+@keyframes light{
+    0%{
+        text-shadow: 2px 2px 0px ;
+    }
+    15%{
+        text-shadow: 2px 2px 4px ;
+    }
+    25%{
+        text-shadow: 2px 2px 1px ;
+    }
+    50%{
+        text-shadow: 2px 2px 8px ;
+    }
+    75%{
+        text-shadow: 2px 2px 2px ;
+    }
+    85%{
+        text-shadow: 2px 2px 5px ;
+    }
+    100%{
+        text-shadow: 2px 2px 1px ;
+    }
+}
 
 body{
     max-width: 1200px;
@@ -192,7 +215,6 @@ header {
     text-align: end;
 }
 #section-2{
-    border:1px solid black;
     margin:50px 0px;
     padding: 10px;
 }
@@ -230,7 +252,6 @@ header {
 }
 .section-2-category-type{
     width:20%;
-    box-shadow: 0px 0px 1px black;
     border-radius: 25px;
     padding: 10px;
     background-color: rgb(240, 240, 240);
@@ -253,4 +274,81 @@ header {
     font-size: 2.5em;
     color:rgb(20, 20, 20);
     text-shadow: 0px 0px 5px black;
+}
+#women .section-2-category-type{
+    width:15%;
+}
+#women .section-2-category-type img{
+    height: 30vh;
+}
+.section-2-category {
+    display: none;
+}
+div[current_choice]{
+    display:flex;
+}
+#section-3 h2{
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+    color: rgb(30, 30, 30);
+    margin:0px;
+    padding: 0px;
+}
+#section-3-container{
+    display: flex;
+    border:1px solid black;
+}
+#section-3-container-left{
+    width:25%;
+    border-right: 1px solid black;
+    font-size: 2.5em;
+    text-align: center;
+}
+#section-3-container-left p{
+    color:red;
+    text-shadow: -2px 0px 5px white;
+    background-image: url(Image/Shopping/Promotion/Halloween/text-background.JPG);
+    background-size: 100% 200%;
+    animation: light;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    border-radius: 25px;
+}
+#section-3-container-right{
+    width:75%;
+}
+#halloween-promotion{
+    background-color: rgb(87, 24, 160);
+}
+#halloween-promotion-title{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#halloween-promotion-title h3{
+    margin:0px;
+    font-size:4em;
+    color:orange;
+    text-shadow: -1px 2px 10px black;
+}
+#halloween-promotion-title img{
+    width:50px;
+    height:50px;
+}
+#halloween-promotion-title span{
+    color:white;
+    font-size: 2em;
+    margin-left:25px;
+    text-shadow:-1px 0px 3px white;
+}
+#halloween-promotion-header::before{
+    content:" weel";
+    background-image: url(Image/Shopping/Promotion/Halloween/background.jpeg);
+    background-size: 100% 100%;
+    z-index:-1;
+}
+#halloween-promotion-header{
+    width:100%;
+    height:100vh;
 }

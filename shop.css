@@ -1,24 +1,46 @@
 @keyframes light{
     0%{
-        text-shadow: 2px 2px 0px ;
+        text-shadow: 1px 2px 0px rgb(255,0,0);
     }
     15%{
-        text-shadow: 2px 2px 4px ;
+        text-shadow: 1px 2px 4px rgb(255,0,0);
     }
     25%{
-        text-shadow: 2px 2px 1px ;
+        text-shadow: 1px 2px 1px rgb(255,0,0);
     }
     50%{
-        text-shadow: 2px 2px 8px ;
+        text-shadow: 1px 2px 8px rgb(255,0,0);
     }
     75%{
-        text-shadow: 2px 2px 2px ;
+        text-shadow: 1px 2px 2px rgb(255,0,0);
     }
     85%{
-        text-shadow: 2px 2px 5px ;
+        text-shadow: 1px 2px 5px rgb(255,0,0);
     }
     100%{
-        text-shadow: 2px 2px 1px ;
+        text-shadow: 1px 2px 1px rgb(255,0,0);
+    }
+}
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes spider{
+    0%{
+        transform: translate(0,-250px);
+    }
+    50%{
+        transform:translate(0,0);
+    }
+    75%{
+        transform:translate(0,-10px);
+    }
+    100%{
+        transform: translate(0,0);
     }
 }
 
@@ -37,7 +59,7 @@ header {
     top:0px;
     background-color: white;
     box-shadow: 0px 0px 5px rgba(80, 80, 80, 0.8);
-    z-index: 2;
+    z-index: 5;
 }
 #header>a{
     display:block;
@@ -130,7 +152,7 @@ header {
 #menu-2 ul li:hover{
     cursor: pointer;
 }
-#menu-2 .notification{
+.notification{
     font-size:0.75em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: aqua;
@@ -184,7 +206,7 @@ header {
 
 /*ANJARA's Shopping page */
 #section-1{
-    background-image: url(Image/Shopping/Shop_background.jpeg);
+    background-image: url(Image/Shopping/1.jpeg);
     background-repeat: auto;
     background-size: 100% 100%;
     width:100%;
@@ -195,7 +217,6 @@ header {
 }
 #section-1-div{
     width:75%;
-    height: 40%;
     background-color: rgba(255,255,255,0.8);
     font-size: 5em;
     box-shadow: 0px 0px 5px grey;
@@ -298,6 +319,7 @@ div[current_choice]{
 #section-3-container{
     display: flex;
     border:1px solid black;
+    overflow: hidden;
 }
 #section-3-container-left{
     width:25%;
@@ -306,9 +328,9 @@ div[current_choice]{
     text-align: center;
 }
 #section-3-container-left p{
-    color:red;
+    color:rgb(230, 51, 6);
     text-shadow: -2px 0px 5px white;
-    background-image: url(Image/Shopping/Promotion/Halloween/text-background.JPG);
+    background-image: url(Image/Shopping/Promotion/Halloween/3.jpg);
     background-size: 100% 200%;
     animation: light;
     animation-duration: 10s;
@@ -317,15 +339,22 @@ div[current_choice]{
 }
 #section-3-container-right{
     width:75%;
+    position:relative;
 }
 #halloween-promotion{
-    background-color: rgb(87, 24, 160);
+    /* background-color: rgba(10,10,10,1); */
+    /* background-image: linear-gradient(75deg ,rgb(161, 97, 235),rgb(156, 84, 238)); */
+    background-image: linear-gradient(75deg ,rgb(10, 10, 10),rgb(120, 120, 120));
 }
-#halloween-promotion-title{
+#halloween-promotion-title {
+    margin-bottom:25px;
+}
+#halloween-promotion-title div{
     display:flex;
     align-items: center;
     justify-content: center;
 }
+
 #halloween-promotion-title h3{
     margin:0px;
     font-size:4em;
@@ -342,13 +371,145 @@ div[current_choice]{
     margin-left:25px;
     text-shadow:-1px 0px 3px white;
 }
-#halloween-promotion-header::before{
-    content:" weel";
-    background-image: url(Image/Shopping/Promotion/Halloween/background.jpeg);
-    background-size: 100% 100%;
-    z-index:-1;
-}
 #halloween-promotion-header{
+    position: relative;
+    border:1px solid black;
     width:100%;
-    height:100vh;
+    height:75vh;
+    display: flex;
+    justify-content: center;
+}
+#spider {
+    position:absolute;
+    right:15px;
+    animation:spider 2s;
+}
+#halloween-background{
+    position:absolute;
+    z-index: 1;
+    background-image: url(Image/Shopping/Promotion/Halloween/1.jpeg);
+    width:100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+#halloween-promotion-offers{
+    position:absolute;
+    z-index: 2;
+    width:75%;
+    background:rgba(220,220,220,0.9);
+    margin-top:10px;
+    border-radius: 25px;
+    padding-left: 10px;
+    box-shadow: -7px 10px 10px rgba(180,180,180,1);
+}
+#halloween-promotion-offers h2{
+    font-size: 4em;
+    color:rgb(250, 250, 250);
+    text-shadow:-5px 5px rgb(25,25,25);
+    font-family: cursive, Helvetica, sans-serif;
+    text-align:start;
+}
+#halloween-promotion-offers ul li{
+    list-style-type: none;
+    margin-top:1em;
+    display: flex;
+    color: rgb(80, 80, 60);
+    font-size: 2em;
+    align-items: center;
+    text-shadow: 0px 0px 3px ;
+}
+#halloween-promotion-offers ul li img{
+    width:75px;
+    height: 67px;
+}
+.promotion-shop{
+    display: flex;
+    margin-top:50px;
+    align-items:center;
+    justify-content: center;
+}
+.promotion-shop img{
+    width:200px;
+    height:150px;
+}
+.promotion-shop p{
+    text-shadow: -3px -1px 5px red;
+    color:red;
+    font-size: 6em;
+    margin:0px;
+}
+#halloween-articles{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.item{
+    width: 30%;
+    font-size:1.5em;
+    background-color: rgba(240,240,240,0.8);
+    position:relative;
+    padding: 10px;
+    box-shadow: 0px 0px 2px black;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+.item:hover{
+    box-shadow:3px 0px 10px white,-3px 0px 10px white,0px 3px 10px white,0px -3px 10px white;
+    cursor:pointer;
+}
+.item-image{
+    height: 40vh;
+}
+.item-image img{
+    width:100%;
+    height: 100%;
+}
+.item p{
+    margin:0px;
+    padding:0px;
+    text-shadow:0px 0px 3px black;
+    margin-bottom:150px;
+}
+.item-bottom{
+    position:absolute;
+    bottom:0;
+    display: flex;
+    padding:10px 0px 10px 0px;
+}
+.price{
+    font-size: 1.2em;
+    color:rgb(20, 20, 20);
+    text-shadow:0px 0px 2px black;
+}
+.cart-config{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    opacity:0;
+}
+.item:hover .cart-config{
+    animation: show 1s;
+    opacity:1;
+}
+.cart-config input{
+    display: inline-block;
+    width:50%;
+    border:none;
+    box-shadow:0px 0px 2px black;
+    border-radius: 5px;
+    font-size: 1em;
+    margin:auto;
+}
+.icon-cart{
+    display:flex;
+}
+
+.plus{
+    position:relative;
+    top:-15px;
+    right:5px;
+    background-color: rgba(50, 50, 50,0.75);
+    border-radius:100px;
+    text-shadow: 0px 0px 5px black;
+    color: white;
 }

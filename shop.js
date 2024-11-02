@@ -1,34 +1,22 @@
-shop_variables=document.getElementsByClassName("shop-var");
-pages=document.getElementsByClassName("page");
-right_button = document.getElementById("slide-right");
-left_button = document.getElementById("slide-left");
-background_above = document.getElementById("container-right-above");
-var index;
-index=0;
-for (let i = 0; i < pages.length; i++) {
-    const element = pages[i];
-    if(element.hasAttribute("current")){
-        console.log(i+" Is the current page");
-    }
+display_choice = document.getElementsByClassName("section-2-category");
+display_options = document.getElementsByClassName("section-2-selector-options");
+category_index = 0;
+promotion_show = document.getElementsByClassName("promotion-content");
+promotion_index = 0;
+halloween_more = document.getElementsByClassName("more");
+function show_selected(index){
+    display_choice[category_index].removeAttribute("current_choice");
+    display_options[category_index].removeAttribute("active");
+    display_choice[index].setAttribute("current_choice","0");
+    display_options[index].setAttribute("active","0");
+    category_index = index;
 }
-function change_page(move){
-    pages[index].removeAttribute("current");
-    shop_variables[index].removeAttribute("current");
-    index= index+move;
-    if(index<0){
-        index = shop_variables.length -1;
-    }
-    else if(index>=shop_variables.length){
-        index = 0;
-    }
-    console.log("Current Page: " + index);
-    pages[index].setAttribute("current","o");
-    shop_variables[index].setAttribute("current","1");
-    if(index != 0){
-        background_above.style.display ="none";
-    }
-    else{
-        background_above.style.display="block";
-    }
-
+function show_promotion(index){
+    promotion_show[promotion_index].removeAttribute("shown")
+    promotion_show[index].setAttribute("shown","0");
+    promotion_index = index;
+}
+function show_more(classname){
+    document.getElementsByClassName("show_more")[0].style.display="none";
+    halloween_more[0].style.display ="flex";
 }

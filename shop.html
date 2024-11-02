@@ -123,13 +123,13 @@
     </section>
     <section id="section-2">
         <div id="section-2-selector">
-            <div class="section-2-selector-options active">
+            <div class="section-2-selector-options" onclick="show_selected(0)" active>
                 <p>Men</p>
             </div>
-            <div class="section-2-selector-options">
+            <div class="section-2-selector-options" onclick="show_selected(1)">
                 <p>Women</p>
             </div>
-            <div class="section-2-selector-options">
+            <div class="section-2-selector-options" onclick="show_selected(2)">
                 <p>Accessories</p>
             </div>
         </div>
@@ -168,7 +168,7 @@
             </div>
         </div>
 
-        <div class="section-2-category" id="women">
+        <div class="section-2-category" id="women" >
             <div class="section-2-category-type">
                 <div class="section-2-category-type-image">
                     <img src="Image/Shopping/T-shirt/1.jpg" alt="">
@@ -245,171 +245,576 @@
         </h2>
         <div id="section-3-container">
             <div id="section-3-container-left">
-                <div class="section-3-container-left-promotion">
+                <div class="section-3-container-left-promotion" onclick="show_promotion(0)" id="halloween">
                     <p>
                         Hall'o-Offer
                     </p>
                 </div>
+                <div class="section-3-container-left-promotion" onclick="show_promotion(1)" id="x-mas">
+                    <p>
+                        Post X-mas
+                    </p>
+                </div>
             </div>
             <div id="section-3-container-right">
-                <div>
-                    <img src="Image/Shopping/Promotion/Halloween/spider.png" id="spider" width="75px" height="150px">
+                <div class="promotion-content" id="halloween-right" shown>
+
+                    <div>
+                        <img src="Image/Shopping/Promotion/Halloween/spider.png" id="spider" width="250px" height="150px">
+                    </div>
+                    <div id="halloween-promotion">
+                        <div class ="promotion-title" id="halloween-promotion-title">
+                            <div>
+                                <img src="Image/Shopping/Promotion/Halloween/4.png" alt="">
+                                <h3>Hall'o-Offer</h3>
+                            </div>
+                            <div>
+                                <span>15 Oct - 10 Nov</span>
+                                <img src="Image/Shopping/Promotion/Halloween/2.png" alt="">
+                            </div>
+                        </div>
+                        <div id="halloween-promotion-header">
+                            <div id="halloween-background">
+                            </div>
+                            <div id="halloween-promotion-offers">
+                                <h2>
+                                    Halloween's Pack:
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <img src="Image/Shopping/Promotion/Halloween/1.png" alt="">
+                                        -50% Reduction at first purchase
+                                    </li>
+                                    <li>
+                                        <img src="Image/Shopping/Promotion/Halloween/3.png" alt="">
+                                        Limited Articles
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="promotion-shop">
+                            <img src="Image/Shopping/Promotion/Halloween/shop.png" alt="">
+                            <p>Shop</p>
+                        </div>
+                        <div id="halloween-articles">
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/1.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/2.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/3.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/5.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/6.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/4.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+                        <div class="show_more" onclick="show_more('more')">
+                            More...
+                        </div>
+    
+                        <div class="more">
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/8.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/9.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/10.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/11.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/12.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/13.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/14.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/15.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/16.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/17.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/18.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/19.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/20.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/21.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/22.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/23.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/24.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/25.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="item">
+                                <div class="item-image">
+                                    <img src="Image/Shopping/Promotion/Halloween/Articles/26.jpg" alt="">
+                                </div>
+                                <p>A simple Hallo-pack</p>
+                                <div class="item-bottom">
+                                    <div class="price">
+                                        $15.0
+                                    </div>
+                                    <div class="cart-config">
+                                        <input type="number" value="1" min="1">
+                                        <div class="icon-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        </div>
+
                 </div>
-                <div id="halloween-promotion">
-                    <div id="halloween-promotion-title">
-                        <div>
-                            <img src="Image/Shopping/Promotion/Halloween/4.png" alt="">
-                            <h3>Hall'o-Offer</h3>
-                        </div>
-                        <div>
-                            <span>15 Oct - 10 Nov</span>
-                            <img src="Image/Shopping/Promotion/Halloween/2.png" alt="">
-                        </div>
+
+                <div class="promotion-content" id="x-mas-right">
+                    <div id="x-mas-title">
+                        <img src="Image/Shopping/Promotion/X-mas/snowflake.png" alt="">
+                        <h1>
+                            X-mas Event
+                        </h1>
                     </div>
-                    <div id="halloween-promotion-header">
-                        <div id="halloween-background">
-                        </div>
-                        <div id="halloween-promotion-offers">
-                            <h2>
-                                Halloween's Pack:
-                            </h2>
-                            <ul>
-                                <li>
-                                    <img src="Image/Shopping/Promotion/Halloween/1.png" alt="">
-                                    -50% Reduction at first purchase
-                                </li>
-                                <li>
-                                    <img src="Image/Shopping/Promotion/Halloween/3.png" alt="">
-                                    Limited Articles
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="promotion-shop">
-                        <img src="Image/Shopping/Promotion/Halloween/shop.png" alt="">
-                        <p>Shop</p>
-                    </div>
-                    <div id="halloween-articles">
-                        <div class="item">
-                            <div class="item-image">
-                                <img src="Image/Shopping/Promotion/Halloween/Articles/1.jpg" alt="">
-                            </div>
-                            <p>A simple Hallo-pack</p>
-                            <div class="item-bottom">
-                                <div class="price">
-                                    $15.0
-                                </div>
-                                <div class="cart-config">
-                                    <input type="number" value="1" min="1">
-                                    <div class="icon-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-image">
-                                <img src="Image/Shopping/Promotion/Halloween/Articles/2.jpg" alt="">
-                            </div>
-                            <p>A simple Hallo-pack</p>
-                            <div class="item-bottom">
-                                <div class="price">
-                                    $15.0
-                                </div>
-                                <div class="cart-config">
-                                    <input type="number" value="1" min="1">
-                                    <div class="icon-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-image">
-                                <img src="Image/Shopping/Promotion/Halloween/Articles/3.jpg" alt="">
-                            </div>
-                            <p>A simple Hallo-pack</p>
-                            <div class="item-bottom">
-                                <div class="price">
-                                    $15.0
-                                </div>
-                                <div class="cart-config">
-                                    <input type="number" value="1" min="1">
-                                    <div class="icon-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-image">
-                                <img src="Image/Shopping/Promotion/Halloween/Articles/5.jpg" alt="">
-                            </div>
-                            <p>A simple Hallo-pack</p>
-                            <div class="item-bottom">
-                                <div class="price">
-                                    $15.0
-                                </div>
-                                <div class="cart-config">
-                                    <input type="number" value="1" min="1">
-                                    <div class="icon-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-image">
-                                <img src="Image/Shopping/Promotion/Halloween/Articles/6.jpg" alt="">
-                            </div>
-                            <p>A simple Hallo-pack</p>
-                            <div class="item-bottom">
-                                <div class="price">
-                                    $15.0
-                                </div>
-                                <div class="cart-config">
-                                    <input type="number" value="1" min="1">
-                                    <div class="icon-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-image">
-                                <img src="Image/Shopping/Promotion/Halloween/Articles/4.jpg" alt="">
-                            </div>
-                            <p>A simple Hallo-pack</p>
-                            <div class="item-bottom">
-                                <div class="price">
-                                    $15.0
-                                </div>
-                                <div class="cart-config">
-                                    <input type="number" value="1" min="1">
-                                    <div class="icon-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div id="x-mas-content">
+                        <img src="Image/Shopping/Promotion/X-mas/sleigh.png" alt="">
+                        <h2>
+                            Coming Soon...
+                        </h2>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+    <script src="shop.js"></script>
     <!--END ANJARA's Code-->
 </body>
 </html>

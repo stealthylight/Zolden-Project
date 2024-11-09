@@ -1,29 +1,23 @@
-shop_variables=document.getElementsByClassName("shop-var");
-pages=document.getElementsByClassName("page");
-right_button = document.getElementById("slide-right");
-left_button = document.getElementById("slide-left");
-background_above = document.getElementById("container-right-above");
-var index;
-index=0;
+// Identifiants des étapes du formulaire
+const steps = document.querySelectorAll('label');
 
-function change_page(move){
-    pages[index].removeAttribute("current");
-    shop_variables[index].removeAttribute("current");
-    index= index+move;
-    if(index<0){
-        index = shop_variables.length -1;
-    }
-    else if(index>=shop_variables.length){
-        index = 0;
-    }
-    console.log("Current Page: " + index);
-    pages[index].setAttribute("current","o");
-    shop_variables[index].setAttribute("current","1");
-    if(index != 0){
-        background_above.style.display ="none";
-    }
-    else{
-        background_above.style.display="block";
-    }
+// Fonction pour gérer les clics sur les boutons précédent et suivant
+function handleButtonClicked(event) {
+  const target = event.target;
+  const currentIndex = Array.prototype.indexOf.call(steps, event.target.parentNode);
 
+  if (target.classList.contains('prev')) {
+    // Réduire l'index pour afficher la précédente étape
+    currentIndex--;
+  } else if (target.classList.contains('next')) {
+    // Augmenter l'index pour afficher la suivante étape
+    currentIndex++;
+  }
+
+  // Afficher la nouvelle étape
+  const newStep = steps[currentIndex];
+  newStep.scrollIntoView();
 }
+
+// Écouter les clics sur les boutons précédent et suivant
+document.querySelectorAll('.prev, .next').forEach(button => button.addEventListener('click', handleButtonClicked));

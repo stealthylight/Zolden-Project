@@ -1,79 +1,14 @@
-:root{
-    --number :2px solid blue;
-    counter-reset: image;
-}
-
-/*Animation*/
-@keyframes shake{
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(-3deg);
-    }
-    50%{
-        transform:rotate(3deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}
-@keyframes show_item{
-    0%{
-        margin-bottom: -100px;
-    }
-    100%{
-        margin-bottom: 0px;
-    }
-}
-@keyframes hide_item{
-    0%{
-        opacity:1;
-    }
-    100%{
-        opacity:0;
-    }
-}
-@keyframes move_cart{
-    0%{
-        font-size: 1em;
-    }
-    100%{
-        font-size: 0.75em;
-        transform: translateX(125px);
-    }
-}
-@keyframes rotate {
-    0%{
-        transform: rotateX(0deg);
-
-    }
-    100%{
-        transform: rotateX(720deg);
-    }
-}
-/*END Animation*/
-
+/* Anjara's Code Above and Navbar */
 body{
     max-width: 1200px;
     margin:auto;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-bottom: 50px;
 }
 header {
     display:flex;
     flex-wrap: wrap;
     align-items: center;
     height: 5em;
-    position:sticky;
-    top:0px;
-    background-color: white;
-    box-shadow: 0px 0px 5px rgba(80, 80, 80, 0.8);
-    z-index: 2;
-}
-#header>a{
-    display:block;
-    width:15%;
 }
 #navbar{
     display: flex;
@@ -82,7 +17,7 @@ header {
     width:85%;
 }
 #logo{
-    width:100%;
+    width:15%;
     padding-right:1.5em;
     box-sizing: border-box;
 }
@@ -98,7 +33,7 @@ header {
     text-decoration: none;
 }
 #hamburger-menu {
-    width:100px;
+    width:50px;
     height:35px;
     background-color: black;
     display:none;
@@ -174,187 +109,104 @@ header {
     top:-1em;
     left:-1em;
 }
-/*ANJARA's Code*/
-#container{
+/* Mialy css */
+#category{
+    position: sticky;
+    top: 0;
+    width: 20%;
+    border: 1px solid black;
+    height: 200px;
+}
+#mesure{
     display: flex;
 }
-#container-left{
-    width: 10%;
-    border:1px solid black;
-}
-#container-right{
-    width: 90%;
-    border:1px solid black;
-}
-.category {
-    box-sizing: border-box;
-    padding:10px;
-}
-.category img{
-    width: 100%;
-    border-radius: 120px;
-    box-shadow: 0px 2px 3px rgba(20, 20, 20, 0.5),0px -2px 3px rgba(20, 20, 20, 0.5);
-}
-#container-right-above{
-    position:relative;
-    box-sizing: border-box;
-    height: 90vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgba(25, 25, 25,1);
-    text-shadow: 0px 0px 3px black,0px 0px 5px white;
-    font-size: 2em;
-    padding: 75px;
-}
-#container-right-above::before{
-    content:"";
-    position:absolute;
-    top:0px;
-    left:0px;
-    width:100%;
-    height: 100%;
-    background-image: url(Image/Shopping/Accessories/Backpack/Backpack_background.JPG);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    z-index: -1;
-    filter:blur(1.5px);
-}
-#container-right-above>h1,#container-right-above>h2{
-    margin:0;
-    padding:0;
-}
-#container-right-above>h2{
-    font-size: 1em;
-}
-#container-right-below{
-    box-sizing: border-box;
-    margin:5px;
-    behavior: smooth;
-}
-.shop-var{
-    margin:25px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.items{
-    width:30%;
-    color: rgb(30, 30, 30);
-    font-size:1.5em;
-    background-color: rgb(230, 230, 230);
-    margin-top:25px;
-    overflow: hidden;
-}
-.items:hover{
-    cursor:pointer;
-    box-shadow: 0px 0px 5px rgb(80, 80, 80);
-}
-.items img{
-    width:100%;
-    box-shadow: 0px 2px 5px rgb(80, 80, 80);
-}
-.items p{
-    text-shadow: 0px 0px 5px rgb(120, 120, 120);
-    margin-bottom:3em;
-}
-
-.add-to-cart{
-    box-sizing: border-box;
-    padding: 5px;
-    border-radius: 50px;
-    box-shadow:1px 1px 3px rgb(115, 143, 236),-1px -1px 3px rgb(115, 143, 236);
-    margin-bottom: 5px;
-    opacity:0;
+.article{
     display: flex;
     align-items: center;
-    width:50%;
 }
-.add-to-cart:hover{
-    background-color:rgb(115, 143, 236);
-    color:white;
+.article img{
+    width: 25%;
+    height: 50px;
+}
+#mesure input{
+    display: inline-block;
+    width: 40%;
+}
+.tous{
+    display:flex;
+}
+#genre{
+    margin-left: auto;
+    width: fit-content;
+    
+}
+#genre a{
+    width: fit-content;
+}
+#page{
+    border: 1px solid black;
+    width: 80%;
+    background-color:#A67458;
+}
+#page a{
+height: 20px;
 
 }
-.add-to-cart:hover i{
-    animation: move_cart;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    z-index: 0;
-}
-.items:hover .add-to-cart{
-    animation: show_item 1s;
-    opacity: 1;
-}
-.items:hover .items-bottom>input{
-    animation: show_item 1s;
-    opacity:1;
-}
-.items-bottom{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-.items-bottom>span{
-    font-size: 1em;
+#genre {
+    margin-top: 10px;
     margin-right: 10px;
 }
-.items-bottom input{
-    background-color: rgba(255,255,255,0);
-    box-shadow: 0px 0px 1px rgb(40, 40, 40);
-    border-radius: 10px;
-    display:inline-block;
-    margin-left: 10px;
-    width:2.5em;
-    font-size: 1em;
-    color: rgb(20, 20, 20);
-    opacity:0;
+#genre #men{
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 6px;
 }
-.add-to-cart>i{
-    color: rgb(50, 75, 255);
+#genre #women{
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 6px;
 }
-.add-to-cart>span{
-    font-size: 0.75em;
-    padding-left:10px;
-    text-shadow: 0px 0px 5px grey;
+
+#genre #couple{
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 6px;
 }
-#container-right-below-slide{
+
+
+#titre{
+    margin-left: 30px;
+    color: black;
+    font-family: 'Gill Sans';
+}
+.box{
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top:10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-#container-right-below-slide>div:not(:nth-child(2)){
-    font-size:2.5em;
-    border:1px solid black;
-    border-radius: 10px;
-    text-shadow: 1px 0px 5px black;
+.item{
+    width: 30%;
+    border: 1px solid black;
+    margin-bottom: 20px;
 }
-#container-right-below-slide>span{
-    width:10px;
-    height: 10px;
-    margin: 0px 5px;
-    display:inline-block;
-    border-radius: 120px;
-    border:1px solid black;
-    align-self: center;
+.item-info{
+    margin: 10px;
 }
-#container-right-below-slide a{
-    text-decoration:none;
-    color:rgb(20, 20, 20);
-    scroll-behavior: smooth;
+.item-image{
+    width: 100%;
+    height: 300px;
 }
-#container-right-below-slide>div:not(:nth-child(2)):hover{
-    background-color: rgb(0, 0, 0);
-    box-shadow: 1px 0px 10px rgba(102, 95, 95, 0.486);
-    color:white;
-    cursor: pointer;
+.item-image img{
+    width: 100%;
+    height: 100%;
+}  
+.item-bottom{
+display: flex;
 }
-.page[current]{
-    background-color: rgb(25, 25, 25);
+.item-add-to-cart input{
+display: inline-block;
+width: 25%;
 }
-.shop-var{
-    display: none;
+.item-cart-icon{
+    display: inline-block;
 }
-.shop-var[current]{
-    display: flex;
-}
-/*END ANJARA's Code*/

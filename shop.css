@@ -1,0 +1,212 @@
+/* Anjara's Code Above and Navbar */
+body{
+    max-width: 1200px;
+    margin:auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 5em;
+}
+#navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:85%;
+}
+#logo{
+    width:15%;
+    padding-right:1.5em;
+    box-sizing: border-box;
+}
+#navbar ul{
+    padding:0px;
+    margin:0px;
+}
+#navbar ul li{
+    list-style-type:none;
+    display: inline;
+}
+#navbar ul li a{
+    text-decoration: none;
+}
+#hamburger-menu {
+    width:50px;
+    height:35px;
+    background-color: black;
+    display:none;
+    border-radius: 15%;
+}
+.hamburger-line{
+    width:30px;
+    margin: 5px auto;
+    height: 5px;
+    background-color: white;
+    display: block;
+    box-sizing: border-box;
+}
+#hamburger-menu:hover{
+    cursor: pointer;
+    background-color: rgb(60, 60, 60);
+    
+}
+#hamburger-menu:hover .hamburger-line{
+    background-color: rgb(220, 220, 220);
+}
+#menu-1{
+    display: flex;
+    flex-wrap:wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1.1em;
+    color:rgb(225,225,225);
+}
+#menu-1 a,#menu-1 select{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:0.9em;
+    text-shadow: 0px 0px 1px black;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    color:rgb(60, 60, 60);
+    margin-right:1.25em;
+    border:none;
+}
+#menu-1 a:hover,#menu-1 select:hover{
+    cursor:pointer;
+    text-shadow: 0px 0px 5px rgb(80, 80, 80);
+}
+#menu-1 a:hover{
+    border-bottom:1px solid rgb(60, 60, 60);
+}
+#menu-2{
+    display: flex;
+    flex-wrap:wrap;
+    font-size: 1em;
+}
+#search{
+    display: flex;
+    flex-wrap: wrap;
+}
+#search input{
+    display:none;
+}
+#menu-2 ul li{
+    margin-left:0.75em;
+}
+#menu-2 ul li:hover{
+    cursor: pointer;
+}
+#menu-2 .notification{
+    font-size:0.75em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aqua;
+    padding: 0.25em;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    position:relative;
+    top:-1em;
+    left:-1em;
+}
+/* Mialy css */
+#category{
+    position: sticky;
+    top: 0;
+    width: 20%;
+    border: 1px solid black;
+    height: 200px;
+}
+#mesure{
+    display: flex;
+}
+.article{
+    display: flex;
+    align-items: center;
+}
+.article img{
+    width: 25%;
+    height: 50px;
+}
+#mesure input{
+    display: inline-block;
+    width: 40%;
+}
+.tous{
+    display:flex;
+}
+#genre{
+    margin-left: auto;
+    width: fit-content;
+    
+}
+#genre a{
+    width: fit-content;
+}
+#page{
+    border: 1px solid black;
+    width: 80%;
+    background-color:#A67458;
+}
+#page a{
+height: 20px;
+
+}
+#genre {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#genre #men{
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 6px;
+}
+#genre #women{
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+#genre #couple{
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+
+#titre{
+    margin-left: 30px;
+    color: black;
+    font-family: 'Gill Sans';
+}
+.box{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.item{
+    width: 30%;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.item-info{
+    margin: 10px;
+}
+.item-image{
+    width: 100%;
+    height: 300px;
+}
+.item-image img{
+    width: 100%;
+    height: 100%;
+}  
+.item-bottom{
+display: flex;
+}
+.item-add-to-cart input{
+display: inline-block;
+width: 25%;
+}
+.item-cart-icon{
+    display: inline-block;
+}

@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="t-shirt.css" type="text/css">
+    <title>T-shirt-Zolden</title>
+    <link rel="stylesheet" href="t-shirt.css">
     <link rel="stylesheet" href="font/fontawesome-free-5.15.3-web/css/all.css">
-    <title>Document</title>
 </head>
 <body>
     <header>
-        <img src="image/Acceuil/logo.JPG" alt="" id="logo">
+        <a href="index.html">
+            <img src="image/Acceuil/logo.JPG" alt="" id="logo">
+        </a>
         <nav id="navbar">
             <div id="hamburger-menu" onclick="display_menu()">
                 <span class="hamburger-line"></span>
@@ -19,7 +21,7 @@
             <div id="menu-1">
                 <ul>
                     <li>
-                        <a href="#">Shop</a>
+                        <a href="shop.html">Shop</a>
                     </li>
                     <li>
                         <select name="woman" id="woman">
@@ -104,140 +106,1225 @@
                 </ul>
             </div>
         </nav>
-    </header> 
-    <!-- code Mialy -->
-<div class="tous">
-    <section id="category">
-        <div class="article">
-            <img src="t-shirt i.PNG" alt="">
-            <a href="#">T-shirt</a>
-        </div><br>
-        <div id="filter">
-            <input type="radio" name="Price">
-            <span>All price</span><br>
-            <input type="radio" name="Price">
-            <span>Customprice</span>
-            <div id="mesure">
-                <input type="number" placeholder="min">
-                <span>-</span>
-                <input type="number" placeholder="max">
-            </div><br>
-        </div>
-    </section>
-    <section id="page">
-        <div id="genre">
-            <a id="men" href="shop.html">men</a>
-            <a id="women" href="shop2.html">women</a>
-            <a id="couple" href="shop3.html">couple</a>
-        </div>
-        <div id="titre">
-            <h3>T-shirt</h3>
-        </div>
-        <div class="box">
-            <div class="item">
-                <div class="item-image"><img src="Image/nike-t-shirt-homme-nike-tee-nsw-ico-homme.webp" alt=""></div>
-                <div class="item-info">
-                    <div class="item-name"><p>"just do it"men's t-shirt</p></div>
-                    <div class="item-bottom">
-                        <div class="item-price"><span>$23.0</span></div>
-                        <div class="item-add-to-cart">
-                            <input type="number">
-                            <div class="item-cart-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>+</span>
-                            </div>
-                        </div>
+    </header>
+    <!--ANJARA's Code-->
+    <div id="container">
+        <div id="container-left">
+            <div id="category">
+                <div  class="category-type">
+                    <div class="category-image">
+                        <img src="Image/Shopping/Accessories/Backpack/T-shirt-icon" alt="Icon">
                     </div>
+                    <span class="category-name">
+                        T-shirt
+                    </span>
                 </div>
             </div>
-            <div class="item">
-                <div class="item-image"><img src="Image/nike bleu.webp"alt=""></div>
-                <div class="item-info">
-                    <div class="item-name"><p>"Nike Sportswear Men's T-Shirt"</p></div>
-                    <div class="item-bottom">
-                        <div class="item-price"><span>$52.0</span></div>
-                        <div class="item-add-to-cart">
-                            <input type="number">
-                            <div class="item-cart-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h3>Filter:</h3>
+            <div id="filter">
+                <input type="radio" name="Price" checked>
+                <span>All price</span><br>
+                <input type="radio" name="Price">
+                <span>Customprice</span>
+                <div id="mesure">
+                    <input type="number" placeholder="min" min="0">
+                    <span>-</span>
+                    <input type="number" placeholder="max" min="0">
+                </div><br>
+            </div>
+        </div>
+        <div id="container-right">
+            <div id="selection">
+                <div onclick="change_genre(0)" current-genre="0">Men</div>
+                <div onclick="change_genre(1)">Women</div>
+            </div>
+            <div id="container-right-above">
                 
-            </div>
-            <div class="item">
-                <div class="item-image"><img src="fotsifotsy.webp"alt=""></div>
-                <div class="item-info">
-                    <div class="item-name"><p>"White Lightweight T-shirt"</p></div>
-                    <div class="item-bottom">
-                        <div class="item-price"><span>$70.0</span></div>
-                        <div class="item-add-to-cart">
-                            <input type="number">
-                            <div class="item-cart-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>+</span>
-                            </div>
-                        </div>
-                    </div>
+                <div id="type-title">
+                    T-shirt
                 </div>
             </div>
-            <div class="item">
-                <div class="item-image"><img src="Image/bogosikely.webp"alt=""></div>
-                <div class="item-info">
-                    <div class="item-name"><p>"T-shirt neck Black"</p></div>
-                    <div class="item-bottom">
-                        <div class="item-price"><span>$10.0</span></div>
-                        <div class="item-add-to-cart">
-                            <input type="number">
-                            <div class="item-cart-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>+</span>
+            <div id="container-right-below">
+                    <div class="shop-var" current>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/1.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-image"><img src="karana.jpg" alt=""></div>
-                <div class="item-info">
-                    <div class="item-name"><p>"T-shirt green"</p></div>
-                    <div class="item-bottom">
-                        <div class="item-price"><span>$30.0</span></div>
-                        <div class="item-add-to-cart">
-                            <input type="number">
-                            <div class="item-cart-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>+</span>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/2.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon </p>
+                            <div class="items-bottom">
+                                <div class="items-price">
+                                    $10.0
+                                </div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>
+                                            Add to cart
+                                        </span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/3.webp" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/4.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/5.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/6.webp" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="item">
-                <div class="item-image"><img src="Image/adidas.webp" alt=""></div>
-                <div class="item-info">
-                    <div class="item-name"><p>"T-Shirt adidas"</p></div>
-                    <div class="item-bottom">
-                        <div class="item-price"><span>$35.0</span></div>
-                        <div class="item-add-to-cart">
-                            <input type="number">
-                            <div class="item-cart-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>+</span>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/8.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
                             </div>
                         </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/9.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/10.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/11.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/12.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/13.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/14.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/15.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/16.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/17.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/18.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/19.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/20.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/21.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/22.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/23.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/24.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/25.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/26.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/27.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/28.webp" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/29.webp" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/man/30.webp" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
+
+                    <div class="shop-var">
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/1.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/1.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/1.webp" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/2.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/2.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/3.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/3.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/4.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/4.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/5.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/5.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/6.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/6.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/7.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/7.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/8.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/8.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/9.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/9.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/10.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/10.jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/11.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/12.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/13.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/14.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/15.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/16.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/17.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/18.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/19.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/20.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/21.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/T-shirt/woman/22.jpeg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+     
+
+
+                <div id="container-right-below-slide">
+                    <div id="slide-left" onclick="move(-1)"><a href="#selection">&lt;</a></div>
+                    <div id="slide-right" onclick="move(1)"><a href="#selection">&gt;</a></div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!--END ANJARA's Code-->
 
+    <footer>
+        <div>
+            <h3>Customer service</h3>
+            <p>Need Help?</p>
+            <p>FAQ</p>
+            <P>Secure payment</P>
+            <p>Delivery</p>
+            <p>Returms & refunds</p>
+            <p>Contact us</p>
         </div>
-        <div class="control">
-            <i class="fas "></i>
+        <div>
+            <h3>Special services</h3>
+            <p>Free delivery for order over $250</p>
+            <p>Chronapost Express delivery 24h</p>
+            <p>E-reservation</p>
+            <p>Expended returns</p>
         </div>
-    </section>
-</div>
+        <div>
+            <h3>Follow us</h3>
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Pinterest</p>
+        </div>
+        <div>
+            <h3>Newsletter</h3>
+            <p>Sign up for email updates on the latest
+                collections. compaigns and video
+            </p>
+            <div id="contact">
+                <input type="email" placeholder="email adress"/>
+                <button>OK</button>
+            </div>
+            <div id="icons">
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram-square"></i>
+            </div>
+        </div>
+    </footer>
+    <hr>
+    <div id="farany">
+        <span>Copyright &copy; 2022 powered by Crocoblock,Inc. All rights reserved</span>
+        <span>
+            <a href="#">Privacy  Policy</a><a href="#">Terms</a>
+        </span>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

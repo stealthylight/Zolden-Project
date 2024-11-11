@@ -124,18 +124,17 @@ header {
 }
 .article{
     display: flex;
-    margin-left: 60px;
+    margin-left: 40px;
 }
 .article img{
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
 }
 .article a{
     text-decoration: none;
     font-family: cursive;
-    margin-top: 30px;
     margin-left: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: black;
 }
 #mesure input{
@@ -174,6 +173,7 @@ header {
     flex-wrap: wrap;
     display: inline-flex;
     width:100%;
+    margin-left: 10px;
 }
 .bottom{
     display: flex;
@@ -199,9 +199,12 @@ opacity: 0;
     opacity: 1;
 }
 .item{
-    background: bisque;
+    background: white;
     width:30%;
-    margin:15px;
+    margin:10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 .hoo{
     margin-left: 30px;

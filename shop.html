@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="font/fontawesome-free-5.15.3-web/css/all.css">
+    <title>Zolden estcraft contenu </title>
+</head>
+<body>
+
+    <!-- Header code starts io le tsy kitihina -->
+
+    <header>
+        <img src="image/Acceuil/logo.JPG" alt="" id="logo">
+        <nav id="navbar">
+            <div id="hamburger-menu" onclick="display_menu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            <div id="menu-1">
+                <ul>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <select name="woman" id="woman">
+                            <option value="Woman">
+                                <a href="">
+                                    Woman
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Cloth
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Pants
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                    <li>
+                        <select name="man" id="man">
+                            <option value="man">
+                                <a href="">
+                                    man
+                                </a>
+                            </option>
+                            <option value="man">
+                                <a href="">
+                                    Short
+                                </a>
+                            </option>
+                            <option value="man">
+                                <a href="">
+                                    Basket
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                    <li>
+                        <a href="">Sale</a>
+                    </li>
+                    <li>
+                        <select name="pages" id="pages">
+                            <option value="pages">
+                                <a href="">
+                                    Pages
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Market
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Design
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div id="menu-2">
+                <ul>
+                    <li id="search">
+                        <input type="text">
+                        <i class="fa fa-search"></i>
+                    </li>
+                    <li>
+                            <i class="fa fa-balance-scale"></i>
+                            <span class="notification">0</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-heart"></i>
+                        <span class="notification">0</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="notification" style="background-color: rgb(81, 148, 248);">0</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Header code starts io le tsy kitihina -->
+
+    <!-- section code starts  -->
+
+
+    <section id="category">
+        <div class="article">
+            <img src="shoe icon.jpg" alt="icon ">
+            <a href="#">Shoes</a>
+        </div>
+        <div id="filter">
+            <input type="radio" name="Price">
+            <span>All price</span> <br>
+            <input type="radio" name="Price">
+            <span>Custom price</span>
+        </div>
+        <div id="mesure">
+            <input type="number" placeholder="min">
+            <span>-</span>
+            <input type="number" placeholder="max">
+        </div>
+    </section>
+    <!-- section code ends -->
+</body>
+</html>

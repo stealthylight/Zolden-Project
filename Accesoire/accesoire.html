@@ -3,34 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Shop</title>
+    <title>Accessoires</title>
     <link rel="stylesheet" href="accesoire.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="left-side">
-            <span class="category" onclick="showCategory('accessoires')">Accessories</span>
-            <div class="sub-categories" id="accessoires">
-                <span class="sub-category" onclick="showItems('sunglass')">Sunglass</span>
-                <span class="sub-category" onclick="showItems('bag')">Bag</span>
-                <span class="sub-category" onclick="showItems('backpack')">Backpack</span>
+    <div class="container">
+        <div class="sidebar">
+            <h2 id="accessoire">Accessoire</h2>
+            <ul id="accessoire-list" class="hidden">
+                <li data-category="backpack">Backpack</li>
+                <li data-category="bag">Bag</li>
+                <li data-category="sunglass">Sunglass</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="product-display" class="product-display">
+                <!-- Les produits seront affichés ici -->
             </div>
-        </div>
-        <div class="right-side">
-            <span onclick="showGender('men')">Men</span>
-            <span onclick="showGender('women')">Women</span>
-        </div>
-    </div>
-    <div class="content">
-        <div class="items" id="items">
-            <!-- Les articles seront affichés ici -->
-        </div>
-        <div class="navigation">
-            <span class="prev" onclick="prevPage()">&#10094;</span>
-            <div class="indicators" id="indicators">
-                <!-- Les indicateurs de page -->
+            <div class="pagination">
+                <button id="prev-page">&lt;</button>
+                <span id="page-indicator">1</span>
+                <button id="next-page">&gt;</button>
             </div>
-            <span class="next" onclick="nextPage()">&#10095;</span>
         </div>
     </div>
     <script src="accesoire.js"></script>

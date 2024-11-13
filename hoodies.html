@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodies of Zolden</title>
+    <link rel="stylesheet" href="hoodies.css">
+    <link rel="stylesheet" href="app.js">
+    <link rel="stylesheet" href="font/fontawesome-free-5.15.3-web/css/all.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="image/Acceuil/logo.JPG" alt="" id="logo">
+        </a>
+        <nav id="navbar">
+            <div id="hamburger-menu" onclick="display_menu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            <div id="menu-1">
+                <ul>
+                    <li>
+                        <a href="shop.html">Shop</a>
+                    </li>
+                    <li>
+                        <select name="woman" id="woman">
+                            <option value="Woman">
+                                <a href="">
+                                    Woman
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Cloth
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Pants
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                    <li>
+                        <select name="man" id="man">
+                            <option value="man">
+                                <a href="">
+                                    man
+                                </a>
+                            </option>
+                            <option value="man">
+                                <a href="">
+                                    Short
+                                </a>
+                            </option>
+                            <option value="man">
+                                <a href="">
+                                    Basket
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                    <li>
+                        <a href="">Sale</a>
+                    </li>
+                    <li>
+                        <select name="pages" id="pages">
+                            <option value="pages">
+                                <a href="">
+                                    Pages
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Market
+                                </a>
+                            </option>
+                            <option value="Woman">
+                                <a href="">
+                                    Design
+                                </a>
+                            </option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div id="menu-2">
+                <ul>
+                    <li id="search">
+                        <input type="text">
+                        <i class="fa fa-search"></i>
+                    </li>
+                    <li>
+                            <i class="fa fa-balance-scale"></i>
+                            <span class="notification">0</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-heart"></i>
+                        <span class="notification">0</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="notification" style="background-color: rgb(81, 148, 248);">0</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Hoodies code-->
+    <div id="container">
+        <div id="container-left">
+            <div id="category">
+                <a href="pant.html" style="text-decoration: none;" class="category-type">
+                    <div class="category-image">
+                        <img src="Image/Shopping/Pant/pant-icon.png">
+                    </div>
+                    <div class="category-name">
+                        Pants
+                    </div>
+                </a>
+                <a href="accessories.html" style="text-decoration: none;" class="category-type">
+                    <div class="category-image">
+                        <img src="Image/Shopping/Accessories/accessories-icon.png">
+                    </div>
+                    <div class="category-name">
+                        Accessories
+                    </div>
+                </a>
+                <a href="t-shirt.html" style="text-decoration: none;"class="category-type">
+                    <div class="category-image">
+                        <img src="Image/Shopping/T-shirt/t-shirt-icon.png" alt="Icon">
+                    </div>
+                    <div class="category-name">
+                        T-shirt
+                    </div>
+                </a>
+                <a href="hoodies.html" style="text-decoration: none;"class="category-type">
+                    <div class="category-image">
+                        <img src="Image/Hoodies/icon hoodies.jpg" alt="Icon">
+                    </div>
+                    <div class="category-name">
+                        Hoodies
+                    </div>
+                </a>
+            </div>
+            <h3>Filter:</h3>
+            <div id="filter">
+                <input type="radio" name="Price" checked>
+                <span>All price</span><br>
+                <input type="radio" name="Price">
+                <span>Customprice</span>
+                <div id="mesure">
+                    <input type="number" placeholder="min" min="0">
+                    <span>-</span>
+                    <input type="number" placeholder="max" min="0">
+                </div><br>
+            </div>
+        </div>
+        <div id="container-right">
+            <div id="selection">
+                <div onclick="change_genre(0)" current-genre="0">Men</div>
+                <div onclick="change_genre(1)">Women</div>
+            </div>
+            <div id="container-right-above">
+                
+                <div id="type-title">
+                   Hoodies
+                </div>
+            </div>
+            <div id="container-right-below">
+                    <div class="shop-var" current>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(1).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Matching white hoodie - SWEET TEDDY - For him</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$89.99</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(2).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Gray hooded sweatshirt New York city - BROOKLYN brand - For men </p>
+                            <div class="items-bottom">
+                                <div class="items-price">
+                                    $39.99.
+                                </div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>
+                                            Add to cart
+                                        </span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(3).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black & Gray hooded sweatshirt - DREAMER - For men</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$19.99</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(4).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p> White hooded sweatshirt - PARIS - For men -</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$20.00</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(5).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black hoodies - DREAM - For men</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$24.99.</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(6).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p> Beige hooded sweatshirt - THE *OPE - For men&You</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$19.99</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(7).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Brown printed hoodie - SLOWLY - For men</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(8).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>White printed hoodie - NASA brand - For men</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$50.99.</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(9).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p> Pink hoodie - THE GREAT - For men-</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$50.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(10).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Gray hooded sweatshirt - BOSTON - brand</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$60.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(11).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>white hoodie - Mastpiess -brand -For men</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$90.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(12).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>beige printed hoodie - BROOKLYN 1898-brand -For men</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$99.99</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/man/(13).jpg">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Pink hoodies - FOR WOMEN - HEART</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+                    <div class="shop-var">
+                        
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(1).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(1).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(3).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(4).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(5).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(6).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(7).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(8).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="items-image">
+                                <img src="Image/Shopping/Hoodie/woman/(9).jpg" alt="">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p>Black Backpack with Neon dots</p>
+                            <div class="items-bottom">
+                                <div class="items-price">$10.0</div>
+                                <div class="items-order">
+                                    <div class="add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <input type="number" value="1" min="1" aria-valuemin="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+     
+
+
+                <div id="container-right-below-slide">
+                    <div id="slide-left" onclick="move(-1)"><a href="#selection">&lt;</a></div>
+                    <div id="slide-right" onclick="move(1)"><a href="#selection">&gt;</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END ANJARA's Code-->
+
+    <footer>
+        <div>
+            <h3>Customer service</h3>
+            <p>Need Help?</p>
+            <p>FAQ</p>
+            <P>Secure payment</P>
+            <p>Delivery</p>
+            <p>Returms & refunds</p>
+            <p>Contact us</p>
+        </div>
+        <div>
+            <h3>Special services</h3>
+            <p>Free delivery for order over $250</p>
+            <p>Chronapost Express delivery 24h</p>
+            <p>E-reservation</p>
+            <p>Expended returns</p>
+        </div>
+        <div>
+            <h3>Follow us</h3>
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Pinterest</p>
+        </div>
+        <div>
+            <h3>Newsletter</h3>
+            <p>Sign up for email updates on the latest
+                collections. compaigns and video
+            </p>
+            <div id="contact">
+                <input type="email" placeholder="email adress"/>
+                <button>OK</button>
+            </div>
+            <div id="icons">
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram-square"></i>
+            </div>
+        </div>
+    </footer>
+    <hr>
+    <div id="farany">
+        <span>Copyright &copy; 2022 powered by Crocoblock,Inc. All rights reserved</span>
+        <span>
+            <a href="#">Privacy  Policy</a><a href="#">Terms</a>
+        </span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
